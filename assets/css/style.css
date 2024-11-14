@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+/* :root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+} */
+:root {
+    --color-body: white;
+    --color-heading: #133e87;
+    --color-base:#133e87;
+    --color-base2: rgb(237, 237, 237);
+    --color-brand: #ed8f1bcf;
+    --color-brand2: #ed8f1bcf;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+#iam{
+    color: var(--color-base);
+}
+.skc{
+    color: var(--color-base);
+}
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+#ic{
+    color: var(--color-base);
+}
+#ps{
+    color: var(--color-brand);
+}
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+.navbar-brand img {
+    border: none;
+    /* Add this line to remove the border around the image */
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: url(../images/sidebar-img.jpg);
+        /* background-color: var(--color-base); */
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+
+
+/* BTN */
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+
+/* CARD */
+
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+
+/* CONTACT */
+
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+
+/* SOCIAL ICONS */
+
+
+/* SOCIAL ICONS */
+
+
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--color-body);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #133e87;
+    white-space: nowrap;
+    transition: color 0.3s;
+    /* Add transition for smooth color change */
+}
+
+.phone-number:hover {
+    color: var(--color-brand);
+    /* Change the color on hover */
+}
+
+.social-icons a:hover {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+@media (max-width: 767px) {
+    .btn-container a {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.0rem;
+        /* Adjust the font size as needed */
+    }
+    a[href^="tel:"] {
+        font-size: 18px;
+        /* Adjust the font size as needed */
+    }
+}
+
+.custom-badge {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    /* Adjust the max-width as needed */
+    border-radius: 20px;
+    /* Adjust the border-radius as needed */
+}
+
+.custom-badge img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-badge-content {
+    padding: 20px;
+    /* Adjust the padding as needed */
+}
+
+.badge-title {
+    font-size: 14px;
+    /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+.link-custom {
+    font-size: 14px;
+    /* Adjust the font size as needed */
+}
+
+
+
+#new
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.skills-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Ensure three skills per row */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed for spacing between items */
+}
+
+.skill {
+    flex-basis: calc(33.33% - 20px); /* Adjust margin between items */
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px; /* Add curved border */
+    overflow: hidden; /* Ensure the border-radius applies properly */
+    transition: transform 0.2s ease-out; /* Smooth hover effect */
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.skill img {
+    width: 55px; /* Adjust as needed for icon size */
+    height: 55px; /* Adjust as needed for icon size */
+    display: block;
+    margin: 0 auto; /* Center the icon within the skill box */
+    padding: 10px; /* Padding around the icon */
+}
+h4,h5,h6{
+    color: white;
+}
